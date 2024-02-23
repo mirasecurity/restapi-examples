@@ -22,8 +22,9 @@ available user accounts on the system along with their corresponding email addre
 An example of the program output is shown below.
 
 > \$ python requests_access_example.py -s https://*decrypt-1*/api/ -u *apiuser* -p *C0mpl3xpw#*
-apiuser: Jack Restitt <developer@org.com>
-admin:   <admin@example.com>
+>
+> apiuser: Jack Restitt <developer@org.com> \
+> admin:   <admin@example.com>
 
 Note: an optional --noverify argument can be used to allow access to untrusted
 self signed WebUI certificates, however this is not recommended for accessing
@@ -37,22 +38,23 @@ The Authentication Token may be created within the ETO WebUI User Settings.
 An example of the program output is shown below.
 
 > \$ python requests_token_example.py -s https://*decrypt-1*/api/ -t *7bc0b3e9a1c0c6eeb0c4cf0c13dbbbcc00965c71*
-datapath: working
-curator: working
-backend: working
-db: good
-elasticsearch: working
-platform: working
-policy.warnings: good
-policy.categories: good
-license: good
-license.exceeded: good
-tasks.background: good
-tasks.scheduled: good
-disk.usage: good
-memory.virtual: good
-cpu.percent: good
-user.passwords: good
+>
+> datapath: working \
+> curator: working \
+> backend: working \
+> db: good \
+> elasticsearch: working \
+> platform: working \
+> policy.warnings: good \
+> policy.categories: good \
+> license: good \
+> license.exceeded: good \
+> tasks.background: good \
+> tasks.scheduled: good \
+> disk.usage: good \
+> memory.virtual: good \
+> cpu.percent: good \
+> user.passwords: good
 
 ## [requests_pki_create_example.py](requests_pki_create_example.py)
 This example allows for a user to upload a endpoint (known server) certificate
@@ -63,4 +65,5 @@ test.testsite.com that can be uploaded using the example script.
 > \$ openssl req -new -x509 -days 365 -nodes -out keycert.pem -keyout keycert.pem -subj '/CN=test.testsite.com'
 
 > $ python requests_pki_create_example.py -s https://*decrypt-1*/api/ -u *apiuser*  -p *C0mpl3xpw* -i keycert.pem
-Certificate and key added to PKI store, cert details: test.testsite.com, Unknown (Unknown, Unknown) [a131f510...]
+>
+> Certificate and key added to PKI store, cert details: test.testsite.com, Unknown (Unknown, Unknown) [a131f510...]

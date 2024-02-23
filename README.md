@@ -14,5 +14,5 @@ For the REST API Getting Started Guide please visit
 
 This repository contains python examples using the following client libraries.
 
-[Bravado library examples](python/bravado)
+[Bravado library examples](python/bravado) \
 [Requests library examples](python/requests)
